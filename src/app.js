@@ -6,8 +6,16 @@ const app = express();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
+const Logger = require('../config/winston');
+const logger = new Logger('app');
+
 module.exports = (db) => {
-    app.get('/health', (req, res) => res.send('Healthy'));
+    app.get('/health', (req, res) => {
+
+        logger.info('Request recieved at /health', 'Helathy');
+        res.send('Healthy');
+    
+    });
 
     app.post('/rides', jsonParser, (req, res) => {
         const startLatitude = Number(req.body.start_lat);

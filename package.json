@@ -15,7 +15,7 @@
     "cover:merge": "npm run cover:unit && npm run cover:integration && nyc merge .nyc_output coverage.json"
   },
   "pre-push": [
-    "test"
+    "test:unit"
   ],
   "keywords": [
     "Xendit"

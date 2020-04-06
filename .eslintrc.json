@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true
+    },
+    "extends": ["plugin:opinionated/recommended"],
+    "plugins": ["opinionated"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
